@@ -2,40 +2,43 @@ import React from 'react';
 import '../styles/POS.css';
 import '../styles/principal.css';
 import logo from '../assets/logo.png';
-
+//import link from 'react-router-dom';
+import Loguin from './Loguin';
 const Pos = () => {
     return (
         <>
             <header>
 
-                <div class="header-content">
+                <div className="header-content">
 
-                    <div class="logo">
+                    <div className="logo">
                         <h1>URBAN<b>HOUSE</b></h1>
                     </div>
 
-                    <div class="menu" id="show-menu">
+                    <div className="menu" id="show-menu">
 
                         <nav>
                             <ul>
-                                <li><a href="#"> <i class="fas fa-home"></i> yy</a></li>
-                                <li><a href="#"> <i class="fab fa-youtube"> </i>xx</a></li>
-                                <li class="menu-selected"><a href="POS.html" class="text-menu-selected">
-                                    <i class="fas fa-file-alt"></i>POS</a></li>
-                                <li><a href="#"> <i class="fas fa-headset"></i> zz</a></li>
+                                <li><a href="#"> <i className="fas fa-home"></i> </a>Vendedor</li>
+                                <li><a href="#"> <i className="fab fa-youtube"> </i>Administrador</a></li>
+                                <li className="menu-selected"><a href="POS.html" className="text-menu-selected">
+                                    <i className="fas fa-file-alt"></i>Cliente</a></li>
+                                <li>
+                            
+                                        <a href="/Login" > <i className="fas fa-headset"></i>Loguin</a></li>
                             </ul>
                         </nav>
 
                     </div>
 
                     <div id="ctn-icon-search">
-                        <i class="fas fa-search" id="icon-search"></i>
+                        <i className="fas fa-search" id="icon-search"></i>
                     </div>
 
                 </div>
 
                 <div id="icon-menu">
-                    <i class="fas fa-bars"></i>
+                    <i className="fas fa-bars"></i>
                 </div>
 
             </header>
@@ -46,14 +49,14 @@ const Pos = () => {
             </div>
 
             <ul id="box-search">
-                <li><a href="#"><i class="fas fa-search"></i></a></li>
-                <li><a href="#"><i class="fas fa-search"></i></a></li>
-                <li><a href="#"><i class="fas fa-search"></i></a></li>
-                <li><a href="#"><i class="fas fa-search"></i></a></li>
-                <li><a href="#"><i class="fas fa-search"></i></a></li>
-                <li><a href="#"><i class="fas fa-search"></i></a></li>
-                <li><a href="#"><i class="fas fa-search"></i></a></li>
-                <li><a href="#"><i class="fas fa-search"></i></a></li>
+                <li><a href="#"><i className="fas fa-search"></i></a></li>
+                <li><a href="#"><i className="fas fa-search"></i></a></li>
+                <li><a href="#"><i className="fas fa-search"></i></a></li>
+                <li><a href="#"><i className="fas fa-search"></i></a></li>
+                <li><a href="#"><i className="fas fa-search"></i></a></li>
+                <li><a href="#"><i className="fas fa-search"></i></a></li>
+                <li><a href="#"><i className="fas fa-search"></i></a></li>
+                <li><a href="#"><i className="fas fa-search"></i></a></li>
             </ul>
 
             <div id="cover-ctn-search"></div>
@@ -61,17 +64,17 @@ const Pos = () => {
 
             {/* <!--Portada--> */}
 
-            <div class="container-all" id="move-content">
+            <div className="container-all" id="move-content">
 
 
-                <div class="blog-container-cover">
-                    <div class="container-info-cover">
+                <div className="blog-container-cover">
+                    <div className="container-info-cover">
                         <h1>VENTAS URBAN HOUSE</h1>
                         <p>Sistema habilitado para ingresar, Buscar, actualizar y consultar ventas</p>
                     </div>
                 </div>
 
-                <div class="container-post">
+                <div className="container-post">
 
                     <input type="radio" id="USUARIOS" name="categories" value="USUARIOS" checked />
                     <input type="radio" id="ADMINISTRADORES" name="categories" value="ADMINISTRADORES" />
@@ -81,7 +84,7 @@ const Pos = () => {
                     <input type="radio" id="...." name="categories" value="...." />
                     <input type="radio" id="....." name="categories" value="....." />
 
-                    <div class="container-category">
+                    <div className="container-category">
                         <label for="USUARIOS">USUARIOS</label>
                         <label for="ADMINISTRADORES">ADMINISTRADORES</label>
                         <label for="VENTAS">VENTAS</label>
@@ -91,16 +94,16 @@ const Pos = () => {
                         <label for=".....">.....</label>
                     </div>
 
-                    <div class="posts">
+                    <div className="posts">
 
-                        <div class="post" data-category="x">
+                        <div className="post" data-category="x">
 
-                            <div class="ctn-img">
+                            <div className="ctn-img">
                                 <img src={logo} alt="" />
                             </div>
                             <h2>ARTICULO 1</h2>
                             <span>nueva coleccion</span>
-                            <ul class="ctn-tag">
+                            <ul className="ctn-tag">
                                 <li>ROPA</li>
                                 <li>URBAN</li>
                                 <li>PARA TI</li>
@@ -109,14 +112,14 @@ const Pos = () => {
 
                         </div>
 
-                        <div class="post" data-category="y">
+                        <div className="post" data-category="y">
 
-                            <div class="ctn-img">
+                            <div className="ctn-img">
                                 <img src={logo} alt="" />
                             </div>
                             <h2>ARTICULO 2</h2>
                             <span>nueva coleccion</span>
-                            <ul class="ctn-tag">
+                            <ul className="ctn-tag">
                                 <li>ROPA</li>
                                 <li>URBAN</li>
                                 <li>PARA TI</li>
@@ -125,14 +128,14 @@ const Pos = () => {
 
                         </div>
 
-                        <div class="post" data-category="JS">
+                        <div className="post" data-category="JS">
 
-                            <div class="ctn-img">
+                            <div className="ctn-img">
                                 <img src={logo} alt="" />
                             </div>
                             <h2>ARTICULO 3</h2>
                             <span>nueva coleccion</span>
-                            <ul class="ctn-tag">
+                            <ul className="ctn-tag">
                                 <li>ROPA</li>
                                 <li>URBAN</li>
                                 <li>PARA TI</li>
@@ -141,14 +144,14 @@ const Pos = () => {
 
                         </div>
 
-                        <div class="post" data-category="JS NODEJS VUE">
+                        <div className="post" data-category="JS NODEJS VUE">
 
-                            <div class="ctn-img">
+                            <div className="ctn-img">
                                 <img src={logo} alt="" />
                             </div>
                             <h2>ARTICULO 4</h2>
                             <span>nueva coleccion</span>
-                            <ul class="ctn-tag">
+                            <ul className="ctn-tag">
                                 <li>ROPA</li>
                                 <li>URBAN</li>
                                 <li>PARA TI</li>
@@ -157,14 +160,14 @@ const Pos = () => {
 
                         </div>
 
-                        <div class="post" data-category="CSS">
+                        <div className="post" data-category="CSS">
 
-                            <div class="ctn-img">
+                            <div className="ctn-img">
                                 <img src={logo} alt="" />
                             </div>
                             <h2>ARTICULO 5</h2>
                             <span>nueva coleccion</span>
-                            <ul class="ctn-tag">
+                            <ul className="ctn-tag">
                                 <li>ROPA</li>
                                 <li>URBAN</li>
                                 <li>PARA TI</li>
@@ -173,14 +176,14 @@ const Pos = () => {
 
                         </div>
 
-                        <div class="post" data-category="PHP">
+                        <div className="post" data-category="PHP">
 
-                            <div class="ctn-img">
+                            <div className="ctn-img">
                                 <img src={logo} alt="" />
                             </div>
                             <h2>ARTICULO 6</h2>
                             <span>nueva coleccion</span>
-                            <ul class="ctn-tag">
+                            <ul className="ctn-tag">
                                 <li>ROPA</li>
                                 <li>URBAN</li>
                                 <li>PARA TI</li>
@@ -189,14 +192,14 @@ const Pos = () => {
 
                         </div>
 
-                        <div class="post" data-category="CSS NODEJS">
+                        <div className="post" data-category="CSS NODEJS">
 
-                            <div class="ctn-img">
+                            <div className="ctn-img">
                                 <img src={logo} alt="" />
                             </div>
                             <h2>ARTICULO 7</h2>
                             <span>nueva coleccion</span>
-                            <ul class="ctn-tag">
+                            <ul className="ctn-tag">
                                 <li>ROPA</li>
                                 <li>URBAN</li>
                                 <li>PARA TI</li>
@@ -213,17 +216,17 @@ const Pos = () => {
                 </div>
 
 
-                <div class="container-footer">
+                <div className="container-footer">
 
                     <footer>
-                        <div class="logo-footer">
+                        <div className="logo-footer">
                             <img src={logo} alt="" />
                         </div>
 
-                        <div class="redes-footer">
-                            <a href="#"><i class="fab fa-facebook-f icon-redes-footer"></i></a>
-                            <a href="#"><i class="fab fa-google-plus-g icon-redes-footer"></i></a>
-                            <a href="#"><i class="fab fa-instagram icon-redes-footer"></i></a>
+                        <div className="redes-footer">
+                            <a href="#"><i className="fab fa-facebook-f icon-redes-footer"></i></a>
+                            <a href="#"><i className="fab fa-google-plus-g icon-redes-footer"></i></a>
+                            <a href="#"><i className="fab fa-instagram icon-redes-footer"></i></a>
                         </div>
 
                         <hr />
