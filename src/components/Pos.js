@@ -1,10 +1,18 @@
 import React from 'react';
 import '../styles/POS.css';
 import '../styles/principal.css';
+import {Link} from 'react-router-dom';
 import logo from '../assets/logo.png';
 //import link from 'react-router-dom';
 import Loguin from './Loguin';
+import history from "history";
 const Pos = () => {
+    const handleRedirect = (item) => {
+
+        //this.props.history.push(item);
+        <Link src={item}/>
+       
+      };
     return (
         <>
             <header>
@@ -25,7 +33,7 @@ const Pos = () => {
                                     <i className="fas fa-file-alt"></i>Cliente</a></li>
                                 <li>
                             
-                                        <a href="/Login" > <i className="fas fa-headset"></i>Loguin</a></li>
+                                        <a onClick={(e) => handleRedirect("/Loguin")} > <i className="fas fa-headset"></i>Loguin</a></li>
                             </ul>
                         </nav>
 
