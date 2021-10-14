@@ -42,7 +42,7 @@ const Userlog = () => {
 
                     <hr />
                     <h3>Lista de usuarios</h3>
-                    <table className="table table-borderer table-hover" id="listaUsuarios" style="width:715px">
+                    <table className="table table-borderer table-hover" id="listaUsuarios" >
 
                     </table>
                 </div>

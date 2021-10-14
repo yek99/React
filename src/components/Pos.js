@@ -5,12 +5,14 @@ import {Link} from 'react-router-dom';
 import logo from '../assets/logo.png';
 //import link from 'react-router-dom';
 import Loguin from './Loguin';
-import history from "history";
+//import history from "history";
+import { useHistory } from 'react-router';
 const Pos = () => {
+    const history = useHistory()
     const handleRedirect = (item) => {
 
-        //this.props.history.push(item);
-        <Link src={item}/>
+        history.push(item);
+        //<Link src={item}/>
        
       };
     return (
@@ -27,15 +29,15 @@ const Pos = () => {
 
                         <nav>
                             <ul>
-                                <li><a href="#"> <i className="fas fa-home"></i> </a>Vendedor</li>
-                                <li><a href="#"> <i className="fab fa-youtube"> </i>Administrador</a></li>
-                                <li className="menu-selected"><a href="POS.html" className="text-menu-selected">
-                                    <i className="fas fa-file-alt"></i>Cliente</a></li>
-                                <li>
-                            
-                                        <a onClick={(e) => handleRedirect("/Loguin")} > <i className="fas fa-headset"></i>Loguin</a></li>
+                            <li><a onClick={(e) => handleRedirect("/Loguin")} > <i className="fas fa-headset"> </i>Loguin</a></li>
+                            {/* <li><a onClick={(e) => handleRedirect("/Registroproductos")} > <i className="fas fa-file-alt"> </i>Vendedor</a></li>
+                                <li><a onClick={(e) => handleRedirect("/Userlog")} > <i className="fas fa-file-alt"> </i>Administrador</a></li>
+                                 <li className="menu-selected"><a href="POS.html" className="text-menu-selected"/></li> 
+                                <li ><a onClick={(e) => handleRedirect("/Registroventas")} > <i className="fas fa-file-alt"></i>Cliente</a></li>
+                                 */}
                             </ul>
                         </nav>
+
 
                     </div>
 
@@ -215,11 +217,7 @@ const Pos = () => {
                             <a href="#"><button>Leer más</button></a>
 
                         </div>
-
-
-
-
-                    </div>
+                 </div>
 
                 </div>
 

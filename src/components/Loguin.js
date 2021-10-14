@@ -44,4 +44,4 @@ const Loguin = () => {
 
     );
 };
-export default Loguin;
+export default Loguin; 
