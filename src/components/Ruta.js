@@ -9,11 +9,11 @@ const Ruta = () => {
   return (
     <BrowserRouter>
       <Switch>
-        <Route exact path="/" component={Pos} />
+        <Route exact path="/Pos" component={Pos} />
          <Route exact path="/Registroproductos" component={Registroproductos} />
         <Route exact path="/Registroventas" component={Registroventas} />
         <Route exact path="/Userlog" component={Userlog} /> 
-        <Route exact path="/Loguin" component={Loguin} />
+        <Route exact path="/" component={Loguin} />
       </Switch>
     </BrowserRouter>
   )

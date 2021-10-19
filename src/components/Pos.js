@@ -10,11 +10,25 @@ import { useHistory } from 'react-router';
 const Pos = () => {
     const history = useHistory()
     const handleRedirect = (item) => {
-
-        history.push(item);
+        var identificador;
+        identificador=prompt("Digite su identificacion: ");
+        // en el 1 se colocaria la consulta de bd
+        if (identificador==1)
+        {
+            history.push(item);
+        }
+        else
+        {
+            alert("Error: Usted no tiene acceso. ")
+        }
+        
         //<Link src={item}/>
        
       };
+      const handleRedirectOut = (item) => {
+        history.push(item);
+      }
+
     return (
         <>
             <header>
@@ -29,12 +43,12 @@ const Pos = () => {
 
                         <nav>
                             <ul>
-                            <li><a onClick={(e) => handleRedirect("/Loguin")} > <i className="fas fa-headset"> </i>Loguin</a></li>
-                            {/* <li><a onClick={(e) => handleRedirect("/Registroproductos")} > <i className="fas fa-file-alt"> </i>Vendedor</a></li>
+                            
+                             <li><a onClick={(e) => handleRedirect("/Registroproductos")} > <i className="fas fa-file-alt"> </i>Vendedor</a></li>
                                 <li><a onClick={(e) => handleRedirect("/Userlog")} > <i className="fas fa-file-alt"> </i>Administrador</a></li>
                                  <li className="menu-selected"><a href="POS.html" className="text-menu-selected"/></li> 
                                 <li ><a onClick={(e) => handleRedirect("/Registroventas")} > <i className="fas fa-file-alt"></i>Cliente</a></li>
-                                 */}
+                                <li><a onClick={(e) => handleRedirectOut("/")} > <i className="fas fa-headset"> </i>Log out</a></li>
                             </ul>
                         </nav>
 

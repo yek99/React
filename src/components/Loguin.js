@@ -1,9 +1,18 @@
 import React from 'react';
 import '../styles/loguin.css';
 import logo from '../assets/logo.png';
+import { useHistory } from 'react-router';
+
 
 const Loguin = () => {
 
+    const history = useHistory()
+const handleRedirect = (item) => {
+
+    history.push(item);
+    //<Link src={item}/>
+   
+  };
     const verificar = () => {
         console.log("estoy dentro del metodo verificar");
         var password=document.getElementById("username").value;
@@ -12,6 +21,7 @@ const Loguin = () => {
         if(password.includes('@gmail'))
         {
         alert("Bienvenido usuario");
+        handleRedirect("/Pos")
         }
         else{
         alert("Favor ingresar un correo de gmail")
